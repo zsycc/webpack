@@ -1,6 +1,6 @@
 # webpack
 学习webpack(版本 3.5.6)
-js文件module.exports = {}
+webpack.config.js文件module.exports = {}
 1.什么是webpack
 webpack => 模块打包机 => exports / module.exports
 它可以做什么事情呢,分析你的项目结构,.找到JavaScript模块以及其他一些浏览器不能直接运行的扩展语言
