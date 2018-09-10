@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>webpack3.5.6</title>
+</head>
+<body>
+    1.什么是webpack
+    webpack => 模块打包机 => exports / module.exports
+    它可以做什么事情呢,分析你的项目结构,.找到JavaScript模块以及其他一些浏览器不能直接运行的扩展语言
+    例如(less),并将其转换和打包为合适的格式供浏览器使用
+    2.为什么使用webpack
+    把js,css,img 等(模块)打包,减少请求
+    3.安装webpack
+    (1)通过npm去下载webpack,第一步该用什么命令:npm init => package.json
+    (2)安装webpack===>全局安装 (不推荐 => 原因 => 框架更新太快)
+       npm i(install) -g webpack(版本号) 3.5.6
+       ====> 局部安装 (推荐) npm i --save-dev webpack@(版本号) 3.5.6(--save-dev开发的模式去使用)
+    4.用终端命令实现webpack打包(webpack模块) (入口) (出口)
+    node_modules/.bin/webpack app/main.js public/build_main.js33
+    hash(散列函数)
+    用终端操作终归不好管理,那么webpack提供了一个配置文件,名字叫做webpack.config.js(规定)
+    然后可以直接使用node_modules/.bin/webpack进行打包 = > 他会搜索是否存在webpack.config.js
+    那么node_modules/.bin/webpack => 还是很长能不能简单好记一点呢一点呢
+    在package.json里面的script这个对象是一个自定义指令,我们可以简化命令实现打包 "start":"webpack",npm start
+    如果不是npm自带的关键字,而是自己定义的指令:npm run key
+    key:(access, adduser, bin, bugs, c, cache, completion, config,
+    ddp, dedupe, deprecate, dist-tag, docs, doctor, edit,
+    explore, get, help, help-search, i, init, install,
+    install-test, it, link, list, ln, login, logout, ls,
+    outdated, owner, pack, ping, prefix, profile, prune,
+    publish, rb, rebuild, repo, restart, root, run, run-script,
+    s, se, search, set, shrinkwrap, star, stars, start, stop, t,
+    team, test, token, tst, un, uninstall, unpublish, unstar,
+    up, update, v, version, view, whoami)
+    webpack的强大功能 调试更简单
+    source maps :打包之后的文件如果配置了 source maps 可以卡到以来的模块代码
+    ==>在哪配置  webpack.config.js  devtool:'eval-source-map' 偏中小型的一种
+    使用eval打包源文件模块,在同一个文件重生成干净的完整的source map,这个选项可以在不影响
+    构建速度的前提下生成完整的source map,但是对打包后输出的JS文件的执行具有性能和安全的隐患
+    在开发阶段这是一个非常好的选项,在生产阶段则一定不要启用这个选项
+    对小到中型的项目中,eval-source-map是一个非常好的选项，
+    再次强调你只应该开发阶段使用它，我们继续对上文新建的webpack.config.js，进行如下配置
+    代码热更新 => 创建自己的开发测试服务器
+    webpack 提供一个本地开发服务器,这个服务器是基于node.js
+    不过这个模块需要 下载并且依赖一下 npm i --save-dev webpack-dev-server => 3.0版本 => webpack 4.0服务的
+    npm i --save-dev webpack-dev-server@2.9.5 => 2.0版本 => webpack 3.0服务的
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "webpack_zsy",
+  "version": "1.1.0",
+  "description": "这是我们入门webpack的一天",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "zsy": "webpack",
+    "server":"webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zsycc/cnode.git"
+  },
+  "keywords": [
+    "zsy"
+  ],
+  "author": "zsy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zsycc/cnode/issues"
+  },
+  "homepage": "https://github.com/zsycc/cnode#readme",
+  "devDependencies": {
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.9.5"
+  }
+}
