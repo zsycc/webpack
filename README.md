@@ -49,6 +49,7 @@ webpack.config.js://唯一的入口文件   entry:__dirname + '文件路径',
   下载:npm i --save-dev webpack-dev-server@版本号  => 3.0版本 => webpack 4.0服务的
     npm i --save-dev webpack-dev-server@2.9.5  => 2.0版本 => webpack 3.0服务的
     不加版本号,下载的是最新版本
+   在package.json里面的script这个对象是一个自定义指令,加上"server": "webpack-dev-server --open",直接用npm run server
   写法:在webpack.config.js: //devServer 2.9.5 启动自带热更新
     //并且他会监测 所依赖的模块是否修改
     //我们update code => 状态触发 => 重新打包 => 触发刷新
