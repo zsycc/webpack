@@ -146,3 +146,14 @@ webpack.config.js://唯一的入口文件   entry:__dirname + '文件路径',
                                       }
                                   })
     在自定义组件::src="big"
+ "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.0",
+    "file-loader": "^2.0.0",
+    "style-loader": "^0.23.0",
+    "url-loader": "^1.1.1",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.9.5"
+  }
